@@ -8,6 +8,7 @@ phases:
   post_build:
     commands:
     - echo "Deployed to S3"
+    - aws s3 cp * s3://wasu-tcw-destination/vasu-demo/  
 artifacts:
   files:
     - '**/*'
